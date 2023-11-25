@@ -13,13 +13,13 @@
       <fieldset>
         <label for="first-name">
           Enter Your First Name:
-          <input required type="text" name="" id="first-name"
+          <input name="first-name" required type="text" name="" id="first-name"
         /></label>
         <label for="last-name"
-          >Enter Your Last Name: <input required type="text" id="last-name"
+          >Enter Your Last Name: <input name="last-name" required type="text" id="last-name"
         /></label>
         <label for="email"
-          >Enter Your Email: <input required type="text" id="email"
+          >Enter Your Email: <input name="email" required type="text" id="email"
         /></label>
         <label for="new-password"
           >Create a New Password:
@@ -28,13 +28,14 @@
             required
             type="password"
             id="new-password"
+            name="password"
         /></label>
       </fieldset>
 
       <fieldset>
         <legend>Account Type (required)</legend>
         <label for="personal-account"
-          ><input
+          ><input class="inline"
             id="personal-account"
             checked
             name="account-type"
@@ -44,6 +45,7 @@
         >
         <label for="business-account"
           ><input
+          class="inline"
             id="business-account"
             name="account-type"
             type="radio"
@@ -54,12 +56,16 @@
         >
       </fieldset>
       <fieldset>
-        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" /></label>
-        <label for="age"
-          >Input your age (years): <input id="age" min="13" max="120" type="number"
+        <label for="profile-picture"
+          >Upload a profile picture: <input name="profile-picture" id="profile-picture" type="file"
         /></label>
-        <label for="referrer"> How did you hear about us? 
-          <select id="referrer">
+        <label for="age"
+          >Input your age (years):
+          <input name="age" id="age" min="13" max="120" type="number"
+        /></label>
+        <label for="referrer">
+          How did you hear about us?
+          <select name="referrer" id="referrer">
             <option value="">(Select One)</option>
             <option value="1">freeCodeCamp News</option>
             <option value="2">freeCodeCamp Youtube Chanel</option>
@@ -67,13 +73,14 @@
             <option value="4">Other</option>
           </select>
         </label>
-        <label for="bio">Provide a bio:
-          <textarea name="" id="bio" cols="30" rows="3"></textarea>
+        <label for="bio"
+          >Provide a bio:
+          <textarea name="bio" placeholder="I like coding on the beach..." name="" id="bio" cols="30" rows="3"></textarea>
         </label>
       </fieldset>
 
       <label for="terms-and-conditions"
-        ><input id="terms-and-conditions" required type="checkbox" />I accept
+        ><input name="terms" id="terms-and-conditions" required type="checkbox" />I accept
         the
         <a href="https://www.freecodecamp.org/news/terms-of-service/"
           >terms and conditions</a
