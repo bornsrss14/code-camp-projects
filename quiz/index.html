@@ -62,13 +62,23 @@
               <ul class="answers-list">
                 <li>
                   <label for="q1-a1">
-                    <input name="rad-btn-one" value="true" id="q1-a1" type="radio" />
+                    <input
+                      name="rad-btn-one"
+                      value="true"
+                      id="q1-a1"
+                      type="radio"
+                    />
                     True
                   </label>
                 </li>
                 <li>
                   <label for="q1-a2">
-                    <input name="rad-btn-one" value="false" id="q1-a2" type="radio" />
+                    <input
+                      name="rad-btn-one"
+                      value="false"
+                      id="q1-a2"
+                      type="radio"
+                    />
                     False
                   </label>
                 </li>
@@ -82,13 +92,23 @@
               <ul class="answers-list">
                 <li>
                   <label for="q2-a1">
-                    <input name="rad-btn-two" value="true" id="q2-a1" type="radio" />
+                    <input
+                      name="rad-btn-two"
+                      value="true"
+                      id="q2-a1"
+                      type="radio"
+                    />
                     True
                   </label>
                 </li>
                 <li>
                   <label for="q2-a2">
-                    <input name="rad-btn-two" value="false" id="q2-a2" type="radio" />
+                    <input
+                      name="rad-btn-two"
+                      value="false"
+                      id="q2-a2"
+                      type="radio"
+                    />
                     False
                   </label>
                 </li>
@@ -102,23 +122,41 @@
           <h2 id="css-questions">CSS</h2>
           <div class="formrow">
             <div class="question-block">
-                <label for="">Are you front end developer?</label>
+              <label for="customer">Are you front end developer?</label>
             </div>
             <div class="answer">
-                <select required name="" id="">
-                    <option value="">Select an option pls</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">Nop</option>
-                </select>
+              <select required name="customer" id="customer">
+                <option value="">Select an option pls</option>
+                <option value="yes">Yes</option>
+                <option value="no">Nop</option>
+              </select>
             </div>
             <div class="question-block">
-                <label for="">Do you have any questions?</label>
+              <label for="css-textarea">Do you have any questions?</label>
             </div>
-            <div class="answer">4</div>
+            <div class="answer">
+              <textarea
+                name="css-questions"
+                id="css-textarea"
+                cols="24"
+                rows="5"
+                placeholder="who is flex box?"
+              ></textarea>
+            </div>
           </div>
         </section>
         <!-- the end of third section -->
+        <button type="submit">Send</button>
       </form>
     </main>
+
+    <footer>
+      <address>
+         <a href="https://freecodecamp.org.">freeCodeCamp</a><br />
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
   </body>
 </html>
