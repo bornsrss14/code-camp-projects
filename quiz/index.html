@@ -24,20 +24,43 @@
         <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
             <section role="region" aria-labelledby="student-info"> 
                 <h2 id="student-info">Student Info</h2>
-
-                <div class="info"><label for="student-name">Student's Name</label><input id="students-name" type="text"></div>
-                <div class="info"><label for="e-mail">e-mail</label><input id="e-mail" type="text"></div>
-                <div class="info"><label for="date">Date of birth</label> <input id="date" type="text"></div>
-
+                <div class="info"><label for="student-name">Student's Name</label><input  placeholder="My name is" name="student-name" id="students-name" type="text"></div>
+                <div class="info"><label for="e-mail">e-mail</label><input name="e-mail" id="e-mail" type="email"></div>
+                <div class="info"><label for="date">D.O.B. <span class="sr-only">Date of birth</span></label> <input name="date" id="date" type="date"></div>
             </section>
+            <!-- the end of first section  -->
+
             <section role="region" aria-labelledby="html-questions">
-                <h2 id="html-questions">HTML
-                </h2>
+                <h2 id="html-questions">HTML</h2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset class="question">
+                        <legend>1st section</legend>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset class="question">
+                        <legend>2nd Section</legend>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        
+                    </fieldset>
+                </div>
             </section>
+            <!-- the end of second section  -->
+
             <section role="region" aria-labelledby="css-questions">
                 <h2 id="css-questions">CSS
                 </h2>
             </section>
+            <!-- the end of third section -->
         </form>
         
     </main>
