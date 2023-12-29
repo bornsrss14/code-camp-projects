@@ -1,68 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="description">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="description" />
 
     <title>Quiz Game Story</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="">
-        <h1>HTML/CSS Quiz</h1>
-        <nav>
-            <ul>
-                <li><a href="#student-info">INFO</a></li>
-                <li><a href="#html-questions">HTML</a></li>
-                <li><a href="#css-questions">CSS</a></li>
-            </ul>
-        </nav>
+      <img
+        id="logo"
+        src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+        alt=""
+      />
+      <h1>HTML/CSS Quiz</h1>
+      <nav>
+        <ul>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
-            <section role="region" aria-labelledby="student-info"> 
-                <h2 id="student-info">Student Info</h2>
-                <div class="info"><label for="student-name">Student's Name</label><input  placeholder="My name is" name="student-name" id="students-name" type="text"></div>
-                <div class="info"><label for="e-mail">e-mail</label><input name="e-mail" id="e-mail" type="email"></div>
-                <div class="info"><label for="date">D.O.B. <span class="sr-only">Date of birth</span></label> <input name="date" id="date" type="date"></div>
-            </section>
-            <!-- the end of first section  -->
+      <form
+        method="post"
+        action="https://freecodecamp.org/practice-project/accessibility-quiz"
+      >
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="student-name">Student's Name</label
+            ><input
+              placeholder="My name is"
+              name="student-name"
+              id="students-name"
+              type="text"
+            />
+          </div>
+          <div class="info">
+            <label for="e-mail">e-mail</label
+            ><input name="e-mail" id="e-mail" type="email" />
+          </div>
+          <div class="info">
+            <label for="date"
+              >D.O.B. <span class="sr-only">Date of birth</span></label
+            >
+            <input name="date" id="date" type="date" />
+          </div>
+        </section>
+        <!-- the end of first section  -->
 
-            <section role="region" aria-labelledby="html-questions">
-                <h2 id="html-questions">HTML</h2>
-                <div class="question-block">
-                    <p>1</p>
-                    <fieldset class="question">
-                        <legend>1st section</legend>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </fieldset>
-                </div>
-                <div class="question-block">
-                    <p>2</p>
-                    <fieldset class="question">
-                        <legend>2nd Section</legend>
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        
-                    </fieldset>
-                </div>
-            </section>
-            <!-- the end of second section  -->
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset name="field-one" class="question">
+              <legend>1st section</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input name="rad-btn-one" value="true" id="q1-a1" type="radio" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input name="rad-btn-one" value="false" id="q1-a2" type="radio" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset name="field-two" class="question">
+              <legend>2nd Section</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input name="rad-btn-two" value="true" id="q2-a1" type="radio" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input name="rad-btn-two" value="false" id="q2-a2" type="radio" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <!-- the end of second section  -->
 
-            <section role="region" aria-labelledby="css-questions">
-                <h2 id="css-questions">CSS
-                </h2>
-            </section>
-            <!-- the end of third section -->
-        </form>
-        
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+          <div class="formrow">
+            <div class="question-block">
+                <label for="">Are you front end developer?</label>
+            </div>
+            <div class="answer">
+                <select required name="" id="">
+                    <option value="">Select an option pls</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">Nop</option>
+                </select>
+            </div>
+            <div class="question-block">
+                <label for="">Do you have any questions?</label>
+            </div>
+            <div class="answer">4</div>
+          </div>
+        </section>
+        <!-- the end of third section -->
+      </form>
     </main>
-</body>
+  </body>
 </html>
