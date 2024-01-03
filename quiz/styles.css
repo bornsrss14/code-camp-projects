@@ -92,3 +92,35 @@ section{
   margin: 0px auto 10px auto;
   max-width: 600px;
 }
+
+.info{
+  padding: 10px 0px 0px 10px ;
+}
+.formrow{
+  margin-top: 14px;
+  padding: 0 10px 0 10px;
+}
+input{
+  font-size: 13px;
+}
+
+.info > input{
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+  text-align:right;
+}
+.info>label, .info>input {
+  display: inline-block;
+}
+.question-block{
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
