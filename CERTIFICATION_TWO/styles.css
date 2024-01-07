@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 16px;
+    /* Setting a base font size of 10px give us easier rem calculations
+    Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth */
+}
+body {
+    font-size: 1.6rem;
+    color: #333;
+    text-align: center;
+    line-height: 1.4;
+}
+h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+h2{
+    font-size: 3.1rem;
+}
+a{
+    color: #477ca7;
+    text-decoration: none;
+}
+
+a:visited{
+color: #74638f;
+}
+
+#main{
+    margin: 30px 8px;
+    padding: 14px;
+    border-radius: 5px;
+    background: #eee;
+
+}
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+
+#figure__img{
+    background: rgb(228, 200, 200);
+    padding: 10px;
+    margin: 0;
+}
+
+#caption__img{
+    margin: 15px 0 5px 0;
+}
+
+#headline{
+    margin: 50px 0;
+    text-align: center;
+}
+
+ul{
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+    text-align: left ;
+    line-height: 1.4;
+}
+li{
+    margin: 16px 0;
+}
+
+blockquote{
+    font-style: italic;
+    max-width: 545px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+}
+#section__tribute_info{
+    margin: 13px;
+    padding: 4px;
+}
+
+
+/* @media(max-width: 460px){
+    h1{
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+}
+@media(max-width:460px){
+    #main{
+        margin: 0;
+    }
+
+}
+@media(max-width:460px){
+    #caption__img{
+        font-size: 1.4rem;
+    }
+
+} */
+
+/* ------------------------------------------------- */
+
+@media(max-width:460px){
+    h1{
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+    #main{
+        margin: 10px;
+        padding: 5;
+    }
+    #caption__img{
+        font-size: 1.4rem;
+    }
+    ul{
+        padding: 14px;
+        margin: 5px;
+    }
+}
