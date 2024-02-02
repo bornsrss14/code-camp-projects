@@ -201,6 +201,7 @@ body {
   background-color: var(--penguin-picorna);
   top: 85%;
   border-radius: 50%;
+  z-index: -1;
 }
 .foot.left{
   left: 25%;
@@ -210,4 +211,24 @@ body {
 .foot.right{
   right: 25%;
   transform: rotate(-80deg);
+}
+
+.arm{
+  width:30%;
+  height:60%;
+  background:linear-gradient(90deg, gray,rgb(209, 210, 199) );
+  border-radius: 30% 30% 30% 100%;
+  z-index: -1;
+}
+.arm.left{
+top: 35%;
+left: 5%;
+transform-origin: 0% 0%;
+transform: rotate(130deg) scaleX(-1);
+}
+.arm.right{
+top:0%;
+right: -5%;
+transform: rotate(-45deg);
+
 }
