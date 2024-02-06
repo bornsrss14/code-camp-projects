@@ -235,5 +235,11 @@ transform: rotate(-45deg);
 /* now, you are going to use css animations to make the penguin wave  */
 
 @keyframes wave {
+  10%{
+    transform: rotate(110deg) scaleX(-1);
+  }
+  20%{}
+  30%{}
+  40%{}
   
 }
