@@ -7,3 +7,7 @@ img{
     width: 10vw;
     height: 10vh;
 }
+
+footer{
+    display: flex;
+}
