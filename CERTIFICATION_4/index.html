@@ -14,28 +14,44 @@
     />
   </head>
   <body>
-    <div>
-      <header>
-        <div>
-          <img src="" alt="" />
+    <div class="page-wrapper">
+      <header id="header">
+        <div class="logo">
+          <img
+            id="header-img"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+            alt="original trombones logo"
+          />
         </div>
-        <nav></nav>
+        <nav id="nav-bar">
+          <ul>
+            <li><a class="nav-link" href="#features">Features</a></li>
+            <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+            <li><a class="nav-link" href="#pircing">Pricing</a></li>
+          </ul>
+        </nav>
       </header>
       <div class="container"></div>
 
       <section id="hero">
-        <h2></h2>
-        <form action="">
-          <input type="text" />
-          <input type="submit" />
+        <h2>Handcrafted, home-made masterpieces</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="enter ur email address"
+            required=""
+          />
+          <input id="submit" type="submit" class="btn" value="Get Started" />
         </form>
       </section>
 
       <div class="container">
-        <section class="features">
+        <section id="features">
           <div class="grid">
             <div class="icon">
-              <i></i>
+              <i class="fa-solid fa-gift"></i>
             </div>
             <div class="desc">
               <h2>Premium Materials</h2>
@@ -47,7 +63,7 @@
           </div>
           <div class="grid">
             <div class="icon">
-              <i></i>
+              <i class="fa-solid fa-cart-shopping"></i>
             </div>
             <div class="desc">
               <h2>Fast Shipping</h2>
@@ -57,23 +73,35 @@
               </p>
             </div>
           </div>
-          <div class="grid"></div>
+          <div class="grid">
+            <div class="icon">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="desc">
+              <h2 clas>Quality Assurance</h2>
+              <p>
+                For every purchase you make, we will ensure there are no damages
+                or faults and we will check and test the pitch of your
+                instrument.
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section class="how-it-works">
+        <section id="how-it-works">
           <iframe
             id="video"
             height="315"
-            src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0"
+            src="https://www.youtube.com/watch?v=xLWci9CcwZA&ab_channel=MinaLe"
             frameborder="0"
-            allowfullscreen=""
+            allowfullscreen
           ></iframe>
         </section>
 
         <section id="pircing">
           <!-- este es el inicio de la seccion de pircing, esta es la primera tarjeta  -->
           <div id="tenor" class="product">
-            <div>Máscara Hannya</div>
+            <div class="level">Máscara Hannya</div>
             <h2>$1420</h2>
             <ol>
               <li>Máscara Hannya</li>
@@ -81,10 +109,11 @@
               <li>Lorem ipsum dolor sit.</li>
               <li>Lorem, ipsum dolor.</li>
             </ol>
+            <button class="btn">Select</button>
           </div>
           <!-- este es el inicio de la segunda tarjeta  -->
           <div id="bass" class="product">
-            <div>Libreta - Kaomoji</div>
+            <div class="level">Libreta - Kaomoji</div>
             <h2>$645</h2>
             <ol>
               <li>Libreta - Kaomoji</li>
@@ -121,6 +150,6 @@
   </body>
 </html>
 
-<!--   <i class="fa-solid fa-gift"></i>   regalo-->
+<!--     regalo-->
 <!-- <i class="fa-solid fa-cart-shopping"></i>  carrito  -->
-<!-- <i class="fa-solid fa-heart"></i>  heart-->
+<!--  heart-->
