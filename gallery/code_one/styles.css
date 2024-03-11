@@ -11,7 +11,7 @@ body {
 header,
 main {
   color: #f2f2f2;
-  max-width: 60%;
+  max-width: 80%;
   padding: 1.5rem 0;
   margin: auto;
 }
@@ -32,12 +32,21 @@ img:hover {
   display: grid;
   gap: 1rem;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .gallery > div:nth-of-type(odd) {
-    grid-row-end: span 1;
-  }
-  .gallery > div:nth-of-type(even) {
-    grid-row-end: span 2;
-  }
+  grid-row-end: span 1;
+}
+.gallery > div:nth-of-type(even) {
+  grid-row-end: span 2;
+}
+
+/* SUMARY 
+  Entiendo que tenemos X cantidad de <img> en nuestro contenedor div > main
+  y decidimos que tomen el diseño de GRID.
+  2.- Para establecer el tamaño de el contenedor padre decimos que el max-width: será de 80%  de su contenedor principal, en este
+  caso es la pantalla en general
+  
+  3.- Al elemento <div class"gallery" establecemos que queremos mostrarlo repeat(auto-fill, minmax(200px, 1fr))>
+  esto es importante porque hago uso de la propiedad auto-fill, y establezco que cada columna tendrá un valor minimo y maximo */
   
