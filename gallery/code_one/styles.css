@@ -11,9 +11,10 @@ body {
 header,
 main {
   color: #f2f2f2;
-  max-width: 80%;
-  padding: 1.5rem 0;
-  margin: auto;
+  max-width: 50%;
+  padding: 1.2rem 0;
+  /* margin: auto; */
+  margin-left: 2rem;
 }
 
 img {
@@ -25,20 +26,56 @@ img {
   object-fit: cover;
   transition: transform 0.4s;
 }
-img:hover {
+/* img:hover {
   transform: scale(1.08);
-}
+  
+} */
 .gallery {
   display: grid;
   gap: 1rem;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
 }
 .gallery > div:nth-of-type(odd) {
   grid-row-end: span 1;
 }
 .gallery > div:nth-of-type(even) {
   grid-row-end: span 2;
+}
+
+/* Este codigo es el que agrego para hacer el overlay con el hover efect  */
+.container_overlay{
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008bba43;
+}
+.container_overlay:hover .overlay,
+.container_overlay:hover img {
+  opacity: 1;
+  border-radius: 8px;
+  transform: scale(1.08);
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* SUMARY 
@@ -49,4 +86,24 @@ img:hover {
   
   3.- Al elemento <div class"gallery" establecemos que queremos mostrarlo repeat(auto-fill, minmax(200px, 1fr))>
   esto es importante porque hago uso de la propiedad auto-fill, y establezco que cada columna tendrá un valor minimo y maximo */
-  
+
+/* 
+  Practicar flexbox es una excelente manera de mejorar tus habilidades en diseño web responsivo y control de disposición de elementos. Aquí tienes algunos ejercicios que te pueden ayudar a familiarizarte con flexbox:
+1. **Crea una barra de navegación horizontal**:
+   - Utiliza flexbox para alinear los elementos de tu barra de navegación horizontalmente.
+   - Juega con propiedades como `justify-content`, `align-items`, `flex-direction`, etc., para lograr diferentes disposiciones y alineaciones.
+2. **Diseña una galería de imágenes flexible**:
+   - Crea una cuadrícula de imágenes utilizando flexbox.
+   - Experimenta con diferentes configuraciones de flexbox para lograr una cuadrícula que se adapte a diferentes tamaños de pantalla de manera elegante.
+3. **Crea un diseño de blog simple**:
+   - Utiliza flexbox para diseñar una estructura básica de blog con un encabezado, una barra lateral y una sección de contenido principal.
+   - Practica la alineación de elementos y la distribución del espacio utilizando flexbox.
+4. **Diseña un formulario con campos flexibles**:
+   - Utiliza flexbox para diseñar un formulario con campos que se expandan y contraigan según el tamaño de la ventana del navegador.
+   - Experimenta con la propiedad `flex-grow` para controlar cómo los elementos se expanden para llenar el espacio disponible.
+5. **Crea un menú desplegable**:
+   - Diseña un menú desplegable utilizando flexbox para el diseño y la alineación de los elementos.
+   - Practica el uso de la propiedad `flex-wrap` para controlar el comportamiento del menú en diferentes tamaños de pantalla.
+6. **Crea un diseño de tarjeta flexible**:
+   - Diseña una tarjeta con contenido flexible que se ajuste dinámicamente al tamaño de la pantalla utilizando flexbox.
+   - Experimenta con diferentes configuraciones de flexbox para lograr un diseño de tarjeta atractivo y adaptable. */
