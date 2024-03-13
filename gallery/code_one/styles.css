@@ -11,10 +11,10 @@ body {
 header,
 main {
   color: #f2f2f2;
-  max-width: 50%;
+  max-width: 60%;
   padding: 1.2rem 0;
-  /* margin: auto; */
-  margin-left: 2rem;
+  margin: auto;
+  /* margin-left: 2rem; */
 }
 
 img {
@@ -34,7 +34,7 @@ img {
   display: grid;
   gap: 1rem;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .gallery > div:nth-of-type(odd) {
   grid-row-end: span 1;
@@ -44,7 +44,7 @@ img {
 }
 
 /* Este codigo es el que agrego para hacer el overlay con el hover efect  */
-.container_overlay{
+.container_overlay {
   position: relative;
 }
 
@@ -57,25 +57,36 @@ img {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
-  background-color: #008bba43;
+  transition: 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.623);
 }
 .container_overlay:hover .overlay,
 .container_overlay:hover img {
   opacity: 1;
   border-radius: 8px;
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
+.text_overlay {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.813rem;
+  max-height: 40%;
+  padding: 20px;
+  color: rgb(17, 8, 78);
+  position: relative;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  text-align: center;
+  overflow: hidden;
+}
+.date_post{
+  position: absolute;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.813rem;
+  padding: 20px;
+  color: rgb(17, 8, 78);
 }
 
 /* SUMARY 
