@@ -1,0 +1,55 @@
+:root {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.super_main_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: green;
+  margin: 2em;
+  height: 20em;
+  width: 40em;
+  padding: 4em;
+}
+
+.main_container {
+    position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 28.5em;
+  border: 0.06em solid red;
+}
+
+.box_general {
+  width: 8.25em;
+  height: 8.25em;
+}
+.box-one {
+  position: relative;
+  background: steelblue;
+  top: 2em;
+  left: 2em;
+  z-index: 1;
+}
+.box-two {
+  background: rgb(94, 144, 195);
+}
+.box-three {
+  background: yellow;
+}
+.box-four {
+  background: orangered;
+}
+.box-five {
+  background: pink;
+}
+.box-six {
+  background: lightcoral;
+}
+p {
+  width: 20em;
+}

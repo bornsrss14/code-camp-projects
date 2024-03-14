@@ -1,23 +1,34 @@
 :root {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: #222222;
   font-family: sans-serif;
 }
-header,
+h1{
+  position: relative;
+  font-size: 2rem;
+  font-weight: 800;
+  top: 100px;
+  color: white;
+  text-align: center;
+}
 main {
+
+  position: relative;
   color: #f2f2f2;
   max-width: 60%;
   padding: 1.2rem 0;
   margin: auto;
-  /* margin-left: 2rem; */
+  margin-left: 2rem;
+  top: 100px;
 }
 
-img {
+.gallery img {
+  position: relative;
   border-radius: 8px;
   box-shadow: 0 0 9px rgba(100, 100, 100, 0.7);
   display: block;
@@ -34,7 +45,8 @@ img {
   display: grid;
   gap: 1rem;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding-bottom: 2em;
 }
 .gallery > div:nth-of-type(odd) {
   grid-row-end: span 1;
@@ -47,7 +59,6 @@ img {
 .container_overlay {
   position: relative;
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -60,6 +71,10 @@ img {
   transition: 0.5s ease;
   background-color: rgba(255, 255, 255, 0.623);
 }
+
+
+
+
 .container_overlay:hover .overlay,
 .container_overlay:hover img {
   opacity: 1;
@@ -80,8 +95,9 @@ img {
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
-.date_post{
+.date_post {
   position: absolute;
+  bottom: 0; /*ya recordé como funciona la opcion de absolute*/
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-size: 0.813rem;
@@ -118,3 +134,42 @@ img {
 6. **Crea un diseño de tarjeta flexible**:
    - Diseña una tarjeta con contenido flexible que se ajuste dinámicamente al tamaño de la pantalla utilizando flexbox.
    - Experimenta con diferentes configuraciones de flexbox para lograr un diseño de tarjeta atractivo y adaptable. */
+.cabecera{
+  background-color: slateblue;
+  color: white;
+  padding: 2em 0;
+  text-align: center;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+
+}
+.gallery__dos {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.image__dos {
+  position: relative;
+}
+
+.overlay__dos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image__dos:hover .overlay__dos{
+  opacity: 1;
+}
