@@ -2,16 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --color-nightForest:#111812;
+  --color-burntMocha: #130e09;
+  --color-midnightSea:#051118;
 }
 
 body {
-  background: #222222;
+  background: var(--color-midnightSea);
   font-family: sans-serif;
 }
 h1 {
   position: relative;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 600;
   top: 100px;
   color: white;
   text-align: center;
@@ -27,6 +30,8 @@ main {
 
 .gallery img {
   position: relative;
+  height: 100%;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 0 9px rgba(100, 100, 100, 0.7);
   display: block;
@@ -40,6 +45,7 @@ main {
   
 } */
 .gallery {
+  position: relative;
   display: grid;
   gap: 1rem;
   grid-auto-flow: dense;
@@ -69,9 +75,22 @@ main {
   transition: 0.5s ease;
   background-color: rgba(255, 255, 255, 0.623);
 }
+.overlay_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
 
 .container_overlay:hover .overlay,
-.container_overlay:hover img {
+.container_overlay:hover img,
+.container_overlay:hover .overlay_img {
   opacity: 1;
   border-radius: 8px;
   transform: scale(1.04);
@@ -79,15 +98,17 @@ main {
 .text_overlay {
   font-family: "Quicksand", sans-serif;
   font-size: 0.813rem;
-  max-height: 40%;
-  padding: 20px;
   color: rgb(17, 8, 78);
   position: relative;
-  top: 30%;
+  padding: 1rem 1rem 0 1rem;
+  top: 20%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 .date_post {
@@ -130,7 +151,7 @@ main {
    - Diseña una tarjeta con contenido flexible que se ajuste dinámicamente al tamaño de la pantalla utilizando flexbox.
    - Experimenta con diferentes configuraciones de flexbox para lograr un diseño de tarjeta atractivo y adaptable. */
 .cabecera {
-  background-color: rgb(138, 130, 185);
+  background-color: var(--color-nightForest);
   color: white;
   padding: 2em 0;
   text-align: center;
@@ -141,9 +162,11 @@ main {
   z-index: 100;
 }
 .gallery__dos {
-  width: 40%;
+  position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2em;
 }
@@ -166,4 +189,37 @@ main {
 
 .image__dos:hover .overlay__dos {
   opacity: 1;
+}
+
+/* Aquí comienzo los estilos del ejemplo */
+.img-ex {
+  border-radius: 8px;
+  box-shadow: 0 0 9px rgba(100, 100, 100, 0.7);
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.img-ex:hover {
+  transform: scale(1.06);
+}
+.text-ex{
+  position:absolute;
+}
+
+.gallery-ex {
+  margin-top: 3em;
+  position:relative;
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+.gallery-ex > div:nth-of-type(odd) {
+  grid-row-end: span 1;
+}
+.gallery-ex > div:nth-of-type(even) {
+  grid-row-end: span 2;
 }
